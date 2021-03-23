@@ -1,0 +1,14 @@
+CRUD: Create, read, update, delete
+
+POST / GET / PUT / DElETE
+
+Only two projects.
+
+No need to submit multiple week projects.
+
+Express, Morgan, Mongoose
+
+Create database model. Kinda like a Excel worksheet.
+
+two folders. Ecommerce and RocktheVote
+
