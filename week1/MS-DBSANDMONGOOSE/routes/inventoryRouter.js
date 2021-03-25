@@ -17,14 +17,20 @@ const inventory = [
 
 
 
-inventoryRouter.route("/")
-.get((req, res) => {
-    res.send(inventory)})
-.post((req, res) => {
-        const newItem = req.body
-        newHItem._id = uuid
-        inventory.push(newItem)
-        res.send(newItem)})
+inventoryRouter.get("/", (req,res, next) => {
+    return res.status(200).send(inventory)
+})
+
+inventoryRouter.get("/search/type", (req, res, next) => {
+    const type = req.query.type
+        if(!type){
+            const error = new Error("You must provide type")
+            res.status(500)
+            return next(error)
+        }
+        const filteredItems = inventory.filter(inventory => inventory.type === type)
+        return res.status(200).send(filteredItems)
+})
 
        
        

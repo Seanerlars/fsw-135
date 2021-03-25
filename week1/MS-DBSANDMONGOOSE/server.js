@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost:27017/inventorydb',
         useNewUrlParser: true,
         useUnifiedTopology: true,
         useCreateIndex: true,
-        useFindandModify: false
+        useFindAndModify: false
     },
     () => console.log("Connected to the Db")
 )
