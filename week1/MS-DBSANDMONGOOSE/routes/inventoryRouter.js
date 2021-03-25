@@ -7,7 +7,7 @@ const inventoryRouter = express.Router()
 
 
 const inventory = [
-    {Name: "Apple", 
+    {name: "Apple", 
     type: "Food",
     year_made: 2021},
 
