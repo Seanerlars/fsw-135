@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\fsw-125\\fsw-125\\week5\\Bounty"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
