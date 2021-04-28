@@ -26,4 +26,4 @@ const issueSchema = new Schema({
     },
 })
 
-module.exports = mongoose.model('Coment', issueSchema)
+module.exports = mongoose.model('Issue', issueSchema)

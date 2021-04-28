@@ -1,10 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "..\\.."
+			"path": ".."
 		},
 		{
-			"path": "..\\..\\..\\..\\..\\week2\\getputdelete"
+			"path": "..\\..\\..\\week2\\getputdelete"
 		}
 	],
 	"settings": {}
