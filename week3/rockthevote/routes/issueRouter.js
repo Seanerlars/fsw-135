@@ -1,4 +1,8 @@
-authRouter.get('/', (req, res, next) => {
+const express = require("express")
+const issueRouter = express.Router()
+const Issue = require('../models/Issue')
+
+issueRouter.get('/', (req, res, next) => {
     Issue.find((err, issue) => {
       if(err){
         res.status(500)
@@ -7,3 +11,5 @@ authRouter.get('/', (req, res, next) => {
       return res.status(200).send(issue)
     })
   })
+
+  module.exports = issueRouter

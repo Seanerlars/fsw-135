@@ -1,10 +1,11 @@
+const express = require("express")
+const commentRouter = express.Router()
+const Comment = require('../models/Comment')
 
 
 
 
-
-
-authRouter.post('/', (req, res, next) => {
+commentRouter.post('/', (req, res, next) => {
     const newComment = new Comment(req.body)
     newComment.save((err, savedComment) => {
       if(err){
@@ -15,7 +16,7 @@ authRouter.post('/', (req, res, next) => {
     })
   })
 
-  authRouter.put("/like/:commentID", (req, res, next) => {
+commentRouter.put("/like/:commentID", (req, res, next) => {
     Comment.findOneAndUpdate(
       { _id: req.params.commentID },
       { $inc: { likes : 1 } },
@@ -30,7 +31,7 @@ authRouter.post('/', (req, res, next) => {
     )
   })
 
-  authRouter.delete("/:commentId", (req, res, next) => {
+  commentRouter.delete("/:commentId", (req, res, next) => {
     Comment.findOneAndDelete(
       {_id: req.params.CommentId}, 
       (err, deletedComment) => {
@@ -42,3 +43,5 @@ authRouter.post('/', (req, res, next) => {
       }
     )
   })
+
+  module.exports = commentRouter
